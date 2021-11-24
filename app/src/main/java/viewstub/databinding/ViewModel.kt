@@ -6,7 +6,7 @@ import android.view.View
 import androidx.lifecycle.MutableLiveData
 
 class ViewModel {
-    val state = MutableLiveData<State>().apply { value = State.Empty }
+    val state = MutableLiveData<State>().apply { value = State.Error }
 
     enum class State {
          Empty ,

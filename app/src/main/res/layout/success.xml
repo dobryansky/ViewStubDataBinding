@@ -5,10 +5,7 @@
     >
 
     <data>
-        <variable
-            name="onClick"
-            type="android.view.View.OnClickListener"
-            />
+
 
         <variable
             name="inflatedVisibility"
@@ -20,7 +17,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="@{inflatedVisibility}"
+        android:visibility="visible"
         >
 
         <ImageView

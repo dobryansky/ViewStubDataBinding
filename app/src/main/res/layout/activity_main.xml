@@ -25,26 +25,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout="@layout/no_data"
-            android:visibility="@{viewModel.state == State.Empty}"
-            app:inflatedVisibility="@{viewModel.state == State.Empty}" />
+            android:visibility="@{viewModel.state == State.Empty}"/>
 
         <ViewStub
             android:id="@+id/error_stub"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout="@layout/error"
-            android:visibility="@{viewModel.state == State.Error}"
-            app:inflatedVisibility="@{viewModel.state == State.Error}" />
+            android:visibility="@{viewModel.state == State.Error}"/>
 
         <ViewStub
             android:id="@+id/success_stub"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout="@layout/success"
-            android:visibility="@{viewModel.state == State.Done}"
-            app:inflatedVisibility="@{viewModel.state == State.Done}"
+            android:visibility="@{viewModel.state == State.Done}"/>
 
-            />
+
 
 
     </LinearLayout>
