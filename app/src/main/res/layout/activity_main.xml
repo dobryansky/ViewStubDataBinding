@@ -22,7 +22,7 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:refreshing="@{viewModel.state == State.Loading.INSTANCE}"
+        app:refreshing="@{viewModel.state == State.Loading}"
         app:onRefreshListener="@{() -> viewModel.loadData()}"
         android:enabled="true"
         >
@@ -37,8 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout="@layout/no_data"
-                android:visibility="@{viewModel.state == State.Empty.INSTANCE}"
-                app:inflatedVisibility="@{viewModel.state == State.Empty.INSTANCE}"
+                android:visibility="@{viewModel.state == State.Empty}"
+                app:inflatedVisibility="@{viewModel.state == State.Empty}"
                 />
 
             <ViewStub
@@ -46,15 +46,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout="@layout/error"
-                android:visibility="@{viewModel.state == State.Error.INSTANCE}"
-                app:inflatedVisibility="@{viewModel.state == State.Error.INSTANCE}"
+                android:visibility="@{viewModel.state == State.Error}"
+                app:inflatedVisibility="@{viewModel.state == State.Error}"
                 app:onClick="@{viewModel.retryClickListener}"
                 />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="@{viewModel.state == State.Done.INSTANCE}"
+                android:visibility="@{viewModel.state == State.Done}"
                 >
 
                 <ImageView
